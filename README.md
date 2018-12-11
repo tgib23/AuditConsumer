@@ -7,8 +7,9 @@ Sample program to consume audit stream and store them directly to MapR-DB JSON.
 
 ```bash
 $ javac -cp .:`mapr classpath` AuditConsumer.java -Xlint:deprecation
-$ java -cp .:`mapr classpath` AuditConsumer -cluster <cluster name> -output_db_path <output db path> -debug <0/1>");
+$ java -cp .:`mapr classpath` AuditConsumer -cluster <cluster name> -output_db_path <output db path> -debug <0/1>
 ```
+
 # Daemonize Consumer
 
 ```bash

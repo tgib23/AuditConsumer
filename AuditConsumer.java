@@ -173,7 +173,7 @@ public class AuditConsumer {
            String lfidStr = st1.nextToken();
            String path= null;
            try {
-               path = fs.getMountPathFid(lfidStr);
+               path = fs.getMountPathFidCached(lfidStr);
            } catch (IOException e){
            }
            lfidPath = "\"FidPath\":\""+path+"\",";
@@ -187,7 +187,7 @@ public class AuditConsumer {
            String name= null;
            try {
              int volumeId = Integer.parseInt(volid);
-               name = fs.getVolumeName(volumeId);
+               name = fs.getVolumeNameCached(volumeId);
              }
            catch (IOException e){
            }
